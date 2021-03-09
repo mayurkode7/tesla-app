@@ -19,8 +19,8 @@ function CarItem(props) {
                 <Text style={styles.subTitle}> Starting at $30,000</Text>
             </View>
 
-            <StyledButton type='primary' label='Custom Order' />
-            <StyledButton type='secondary' label='Existing Inventory' />
+            <StyledButton type='primary' label='Custom Order' onPress={() => { console.warn('one') }} />
+            <StyledButton type='secondary' label='Existing Inventory' onPress={() => { console.warn('two') }} />
         </View>
     )
 }
