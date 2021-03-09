@@ -8,7 +8,7 @@ import {
 import styles from "./style";
 import { ModelS } from '../config'
 
-
+import StyledButton from '../StyledButton'
 
 function CarItem(props) {
     return (
@@ -18,6 +18,9 @@ function CarItem(props) {
                 <Text style={styles.title}> Model S</Text>
                 <Text style={styles.subTitle}> Starting at $30,000</Text>
             </View>
+
+            <StyledButton type='primary' label='Custom Order' />
+            <StyledButton type='secondary' label='Existing Inventory' />
         </View>
     )
 }
