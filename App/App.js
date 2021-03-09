@@ -11,12 +11,15 @@ import {
 import CarItem from './CarItem';
 
 
-
 const App = () => {
   return (<>
     <View style={styles.container}>
 
-      <CarItem />
+      <CarItem
+        name="Model Y"
+        tagline="Starting at $30,000"
+        taglineCTA="Touchless Delivery"
+        image={require('./assets/images/ModelY.jpeg')} />
 
 
     </View>

@@ -6,21 +6,28 @@ import {
     ImageBackground
 } from 'react-native';
 import styles from "./style";
-import { ModelS } from '../config'
-
 import StyledButton from '../StyledButton'
 
 function CarItem(props) {
+
+    const { name, tagline, taglineCTA, image } = props;
+
     return (
         <View style={styles.carContainer}>
-            <ImageBackground source={ModelS} style={styles.carContainerBG} />
+            <ImageBackground source={image} style={styles.carContainerBG} />
             <View style={styles.titles}>
-                <Text style={styles.title}> Model S</Text>
-                <Text style={styles.subTitle}> Starting at $30,000</Text>
+                <Text style={styles.title}> {name}</Text>
+                <Text style={styles.subTitle}> {tagline} {' '}
+                    <Text style={styles.subTitleCTA}>
+                        {taglineCTA}
+                    </Text>
+                </Text>
             </View>
 
-            <StyledButton type='primary' label='Custom Order' onPress={() => { console.warn('one') }} />
-            <StyledButton type='secondary' label='Existing Inventory' onPress={() => { console.warn('two') }} />
+            <View style={styles.buttonContainer}>
+                <StyledButton type='primary' label='Custom Order' onPress={() => { console.warn('one') }} />
+                <StyledButton type='secondary' label='Existing Inventory' onPress={() => { console.warn('two') }} />
+            </View>
         </View>
     )
 }
