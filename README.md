@@ -16,3 +16,13 @@ Mobile application for Tesla Cars
 - How do you make background image full width and full screen
 - what is resizeMode
 - How do your prevent background image to hide your main content
+
+- how to change App label
+
+  -28
+
+The way I did this for android (hacky, but it works) is just changed the string app_name field in
+
+android/app/src/main/res/values/strings.xml
+
+It will change the name of your installed android app to whatever you put as the value.
