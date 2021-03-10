@@ -8,20 +8,14 @@ import {
   StatusBar,
   ImageBackground
 } from 'react-native';
-import CarItem from './CarItem';
+import CarsList from './components/CarsList'
 
 
 const App = () => {
   return (<>
     <View style={styles.container}>
 
-      <CarItem
-        name="Model Y"
-        tagline="Starting at $30,000"
-        taglineCTA="Touchless Delivery"
-        image={require('./assets/images/ModelY.jpeg')} />
-
-
+      <CarsList />
     </View>
   </>
   );
